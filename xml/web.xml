@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website>
+	<page heiarchy="top" url="/index.php" title="The Frozen Bean" description="Come on down to The Frozen Bean.">
+		<!-- About -->
+		<page heiarchy="first-nested" url="/about/index.php" title="About" description="About The Frozen Bean.">
+			<page heiarchy="only-nested" url="/about/site-index.php" title="Site Index" description="The Frozen Bean site index." />
+		</page>
+		<!-- Catering -->
+		<page heiarchy="nested" url="/catering/index.php" title="Catering" description="The Frozen Bean catering plans." />
+		<!-- Contact -->
+		<page heiarchy="nested" url="/contact/index.php" title="Contact" description="Contact The Frozen Bean today." />
+		<!-- Menu -->
+		<page heiarchy="nested" url="/menu/index.php" title="Menu" description="The Frozen Bean Menu options.">
+			<page heiarchy="first-nested" url="/menu/bakery.php" title="Bakery" description="The Frozen Bean bakery options." />
+			<page heiarchy="nested" url="/menu/coffee.php" title="Coffee" description="The Frozen Bean coffee options." />
+			<page heiarchy="nested" url="/menu/froyo.php" title="Froyo" description="The Frozen Bean Froyo options." />
+			<page heiarchy="last-nested" url="/menu/lunch.php" title="Lunch" description="The Frozen Bean lunch options." />
+		</page>
+		<!-- Order -->
+		<page heiarchy="nested" url="/order/index.php" title="Order Online" description="The Frozen Bean order online." />
+		<!-- Recipes -->
+		<page heiarchy="nested" url="/recipes/index.php" title="Recipes" description="The Frozen Bean recipes." />
+		<!-- Rewards -->
+		<page heiarchy="last-nested" url="/rewards/index.php" title="Rewards" description="The Frozen Bean rewards." />
+	</page>
+</website>

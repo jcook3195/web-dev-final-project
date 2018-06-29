@@ -1,0 +1,935 @@
+/***
+*
+*
+*** COLOR SCHEME ***
+*--#EF3E36 -- RED
+*--#17BEBB -- BLUE
+*--#EDB88B -- BROWN
+*--#FFFFFF -- WHITE
+*--#2E282A -- BLACK
+*
+*
+*** FONT PAIRINGS ***
+* <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Dosis|Open+Sans" rel="stylesheet">
+* font-family: 'Dosis', sans-serif;
+* font-family: 'Open Sans', sans-serif;
+* font-family: 'Architects Daughter', cursive;
+*
+*
+***	Table of Contents ***
+*
+* CTL+F and search for the corresponding number notated.
+*
+*	1.0 Default Styles
+*	2.0 Layout Styles
+*			2.1 General
+*			2.2 Header
+*			2.3 Navigation
+*				2.3.1 General Navigation
+*				2.3.2 Slicknav
+*			2.4 Main
+*				2.4.1 jQuery UI
+*			2.5 Footer
+*				2.5.1 Footer Nav 
+*			2.6 Forms
+*			2.7 Tables
+*				2.7.1 Table Buttons
+*	3.0 Text Styles
+*			3.1 General
+*			3.2 Buttons
+*	4.0 Page Specific Styles
+*			4.1 Title Backgrounds
+*			4.2 Home Page
+*			4.3 Menu Pages
+*				4.3.1 General Menu
+*				4.3.2 Main Grid
+*				4.3.3 Coffee Menu
+*			4.4 Recipes Page
+*	5.0 Media Queries
+*
+***/
+
+/**********
+
+	1.0 Default Styles
+
+**********/
+
+h1 {
+	font-size: 2.2em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+h4 {
+	font-size: 1.4em;
+}
+
+h5 {
+	font-size: 1.2em;
+}
+
+h6 {
+	font-size: .8em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 16px 0;
+}
+
+h1, h2, h3, h4, h5, h6, a, legend, label, th, td, input, option, span.option {
+	font-family: 'Dosis', sans-serif;
+}
+
+p, li {
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.2em;
+}
+
+p {
+	margin-bottom: 12px;
+}
+
+a {
+	text-decoration: none;
+	color: #EF3E36;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+}
+
+ol {
+	display: block;
+	list-style-type: decimal;
+}
+
+ul,
+ol {
+	margin: 16px 0;
+	padding-left: 28px;
+}
+
+li {
+	display: list-item;
+}
+
+table,
+th,
+td {
+	border: 1px solid #2E282A;
+}
+
+table {
+	margin: auto;
+}
+
+th {
+	padding: 16px 20px;
+	font-size: 1.2em;
+}
+
+td {
+	padding: 10px 12px;
+}
+
+th {
+	text-transform: uppercase;
+	letter-spacing: .8px;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	margin: auto;
+}
+
+legend {
+	font-size: 1.8em;
+	margin-bottom: 16px;
+}
+
+label {
+	margin-bottom: 6px;
+	display: inline-block;
+}
+
+input,
+select {
+	width: 100%;
+	margin: 0 auto 12px auto;
+	padding: 2px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: initial;
+}
+
+textarea {
+	width: 100%;
+	height: 180px;
+	margin: 0 10px;
+	display: block;
+	box-sizing: border-box;
+}
+
+blockquote {
+	margin: 24px 0;
+	padding: 0 32px;
+	font-size: 1.2em;
+	font-weight: 600;
+	font-style: italic;
+	font-family: 'Dosis', sans-serif;
+	letter-spacing: 1px;
+}
+
+blockquote:before {
+	content: "\"";
+	font-size: 2.4em;
+	color: #17BEBB;
+	font-style: italic;
+}
+
+footer {
+	background-color: #666;
+}
+
+iframe {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/**********
+	
+	2.0 Layout Styles
+
+**********/
+
+/**
+*	2.1 General
+*/
+
+.clear {
+	clear: both;
+}
+
+.hide {
+	display: none !important;
+}
+
+.buffer {
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 1024px;
+	margin: auto;
+}
+
+.first {
+	clear: both;
+}
+
+.one-half {
+	width: 50%;
+	float: left;
+}
+
+.one-third {
+	width: 33.33%;
+	float: left;
+}
+
+.two-thirds {
+	width: 66.66%;
+	float: left;
+}
+
+.text-container {
+	margin: 24px 0 0 0;
+	padding: 12px 24px;
+}
+
+.field-container {
+	clear: both;
+}
+
+.rewards img {
+	margin-bottom: 12px;
+}
+
+/**
+*	2.2 Header
+*/
+
+.logo-container {
+	display: inline-block;
+}
+
+.logo {
+	width: 150px;
+}
+
+/**
+*	2.3 Navigation
+*/
+
+/* 2.3.1 General Navigation */
+
+header nav {
+	float: right;
+	margin-top: 40px;
+}
+
+nav li {
+	list-style-type: none;
+}
+
+.main-nav li {
+	display: inline-block;
+}
+
+.main-nav a {
+    padding: .8em;
+    color: #17BEBB;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    display: block;
+    border-bottom: 2px solid transparent;
+    font-weight: 600;
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+
+.main-nav a:hover {
+	border-bottom: 2px solid #17BEBB;
+	text-decoration: none;
+}
+
+.main-nav li ul a {
+	padding: .8em 2em;
+	border-bottom: none;
+	border-left: 2px solid transparent;
+	background-color: #fff;
+	box-shadow: 1px 1px 2px #666;
+}
+
+.main-nav li ul a:hover {
+	border-bottom: none;
+	border-left: 2px solid #17BEBB;
+}
+
+.main-nav li ul {
+	display: none;
+	position: absolute;
+	padding-left: 0;
+	margin: 0 0 0 12px;
+}
+
+.main-nav li ul li {
+	display: block;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown:hover ul {
+	display: block;
+}
+
+/* 2.3.2 Slicknav */
+
+.slicknav_menu {
+	background-color: #2E282A !important;
+}
+
+.slicknav_menu .slicknav_btn {
+	background-color: #17BEBB;
+}
+
+/**
+*	2.4 Main
+*/
+
+.title-container {
+	width: 100%;
+	height: 250px;
+	background-repeat: no-repeat;
+}
+
+.form-container, .table-container {
+	max-width: 60%;
+	margin: 24px auto;
+}
+
+/* 2.4.1 jQuery UI */
+
+.tabs-container {
+	margin: 24px auto;
+	max-width: 76%;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #17BEBB !important;
+    background: #17BEBB !important;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #fff !important;
+}
+
+/**
+*	2.5 Footer
+*/
+
+.creds-container {
+	height: 24px;
+	background-color: #fff;
+	padding: 12px 0;
+}
+
+/* 2.5.1 Footer Nav */
+
+.footer-nav {
+	display: inline-block;
+	border-left: 3px solid #fff;
+    margin: 10px 0;
+}
+
+.footer-nav li {
+	margin-bottom: 8px;
+}
+
+.map-container {
+	text-align: center;
+    margin: 20px 0;
+}
+
+/**
+*	2.6 Forms
+*/
+
+.ta-container {
+	width: 100%;
+}
+
+form .one-half {
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+/**
+*	2.7 Tables
+*/
+
+.table-container {
+	overflow-x: auto;
+}
+
+.pricing-table {
+	color: #fff;
+	box-shadow: 1px 1px 3px #666;
+}
+
+.pricing-table,
+.pricing-table th,
+.pricing-table td {
+	border: none;
+}
+
+.pricing-table th {
+	background-color: #2E282A;
+}
+
+.pricing-table td {
+	background-color: #636363;
+}
+
+th.preferred,
+td.preferred {
+	color: #2E282A;
+	background-color: #fff;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+th.preferred {
+	background-color: #EDB88B;
+}
+
+td.preferred {
+	background-color: #f4f4f4;
+}
+
+/* 2.7.1 Table Buttons */
+
+.pricing-table .button {
+	padding: .8em 1.6em;
+}
+
+.pricing-table .button:hover {
+	color: #fff;
+}
+
+.pricing-table .preferred .button {
+	background-color: #EF3E36;
+	border-color: #EF3E36;
+}
+
+.pricing-table .preferred .button:hover {
+	color: #EF3E36;
+	background-color: transparent;
+}
+
+/**********
+	
+	3.0 Text Styles
+
+**********/
+
+/**
+*	3.1 General
+*/
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.title {
+	font-size: 3em;
+	text-transform: uppercase;
+	padding-top: 90px;
+	color: #fff;
+	text-shadow: 1px 1px 3px #2E282A;
+	margin: 0;
+}
+
+.serif {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.sans {
+	font-family: 'Dosis', sans-serif;
+}
+
+.hand-written {
+	font-family: 'Architects Daughter', cursive;
+}
+
+footer a {
+	color: #fff;
+}
+
+.error {
+	color: red;
+	margin-top: 8px;
+}
+
+.success {
+	color: #54ea3c;
+}
+
+/**
+*	3.2 Buttons
+*/
+
+.button {
+	padding: 1em;
+    display: inline-block;
+    margin: 15px 2%;
+    color: #fff;
+    background: #17BEBB;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 100%;
+    border: 4px solid #17BEBB;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+	background: transparent;
+    color: #17BEBB;
+    -webkit-transition: .3s;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.home-cta-container-table-cell .cta-button:hover {
+	color: #fff;
+}
+
+/**********
+
+	4.0 Page Specific Styles
+
+**********/
+
+/**
+*	4.1 Title Backgrounds
+*/
+
+.jumbotron {
+	background-image: url("../images/backgrounds/coffee-table.jpg");
+}
+
+body .title-container {
+	background-position: center;
+}
+
+body.about .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.menu .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.coffee .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.froyo .title-container {
+	background-image: url("../images/backgrounds/froyo.jpg");
+}
+
+body.bakery .title-container {
+	background-image: url("../images/backgrounds/bakery.jpg");
+}
+
+body.lunch .title-container {
+	background-image: url("../images/backgrounds/sandwich.jpg");
+}
+
+body.order .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.catering .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.recipes .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.rewards .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.contact .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+body.site-index .title-container {
+	background-image: url("../images/backgrounds/bkgrd.jpg");
+}
+
+/**
+*	4.2 Home Page
+*/
+
+.jumbotron {
+	min-height: 100vh;
+	background-size: cover;
+	width: 100%;
+}
+
+.jumbotron h1 {
+	color: #fff;
+	text-shadow: 1px 1px 3px #2E282A;
+}
+
+.jumbotron .wrapper {
+	height: 100%;
+}
+
+.home-cta-container-table {
+	display: table;
+    height: 100vh;
+    width: 100%;
+}
+
+.home-cta-container-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.home-section {
+	padding: 24px 0;
+}
+
+.home-section.section-2 {
+	background-color: #f2f2f2;
+}
+
+.home-section.section-2 .pad {
+	padding: 0 8px;
+}
+
+.home-section.section-3 {
+	background-color: #b78856;
+	color: #fff;
+}
+
+.home-section.section-3 a {
+	color: #fff;
+}
+
+.home-section.section-3 a:hover {
+	color: #000;
+}
+
+.home-section.section-3 .pad {
+	padding: 24px 12px;
+}
+
+.home-section.section-5 {
+	background-color: #17BEBB;
+	color: #fff;
+}
+
+/**
+*	4.3 Menu Pages
+*/
+
+/* 4.3.1 General Menu */
+
+.menu-title {
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+}
+
+.menu-container {
+	background-color: #2E282A;
+	background-image: url("../images/backgrounds/blackboard-bkgrd.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	max-width: 60%;
+	margin: 24px auto;
+	padding: 12px;
+	border-radius: 10px;
+}
+
+.menu-container h1,
+.menu-container h2,
+.menu-container h3,
+.menu-container h4,
+.menu-container h5 {
+	border-bottom: 2px solid #fff;
+	display: inline-block;
+	min-width: 51%;
+}
+
+.menu-container p,
+.menu-container h1,
+.menu-container h2,
+.menu-container h3,
+.menu-container h4,
+.menu-container h5,
+.menu-container h6 {
+	font-family: 'Architects Daughter', cursive;
+}
+
+/* 4.3.2 Main Grid */
+
+.menu-link {
+	margin: 32px auto;
+}
+
+.menu-link:hover {
+	background-color: #f4f4f4;
+}
+
+.menu-link img {
+	margin: auto;
+}
+
+.menu-link a:hover {
+	text-decoration: none;
+}
+
+/* 4.3.3 Coffee Menu */
+
+
+/**
+*	4.4 Recipes Page
+*/
+
+.recipe-list-container {
+	padding: 22px 12px;
+}
+
+.recipe-list-container p,
+.recipe-title,
+.recipe-img-container {
+	padding: 12px;
+}
+
+.recipe-link {
+	color: #2E282A;
+}
+
+.recipe-title {
+	margin: 0;
+}
+
+.single-recipe {
+	border-bottom: 1px solid #666;
+	background-color: #fff;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.single-recipe:hover {
+	background-color: #f4f4f4;
+}
+
+/**********
+
+	5.0 Media Queries
+
+**********/
+
+@media print {
+	header,
+	footer {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+
+	.wrapper {
+		max-width: 960px;
+	}
+
+}
+
+@media only screen and (max-width: 960px) {
+
+	.wrapper {
+		max-width: 100%;
+	}
+
+	.logo-container {
+		width: 100%;
+	}
+
+	.logo {
+		margin: auto;
+	}
+
+	h1, h2, h3, h4, h5, h6, legend {
+		margin-left: 12px;
+	}
+
+	p {
+		padding: 0 12px;
+	}
+
+	.tabs-container {
+		max-width: 96%;
+	}
+
+	.footer-nav {
+		border: none;
+		margin: 0;
+	}
+
+}
+
+@media only screen and (max-width: 800px) {
+
+	.form-container, 
+	.table-container {
+		max-width: 100%;
+	}
+
+	.menu-container {
+		max-width: 80%;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	.one-half, .one-third, .two-thirds {
+		float: none;
+		width: 100%;
+	}
+
+	.pricing-table th,
+	.pricing-table td {
+		font-size: .8em;
+	}
+
+	.pricing-table .button {
+    	padding: .8em .8em;
+	}
+
+	textarea {
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+
+	.footer-nav {
+		width: 80%;
+    	margin: auto;
+    	display: block;
+    	text-align: center;
+	}
+
+	footer .one-half {
+		width: 50%;
+		float: left;
+	}
+
+	.menu-container {
+		max-width: 90%;
+	}
+
+	.map-container {
+		padding: 0 12px;
+	}
+
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
